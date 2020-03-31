@@ -1,0 +1,180 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	"00000000-0000-0000-0000-000000000000",
+	'ControlUI',
+	'');
+INSERT INTO C_EP
+	VALUES ("90e19668-a3cb-40fa-b707-4e8ecb0b3925",
+	"a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	-1,
+	'vehicleArrives',
+	'');
+INSERT INTO C_AS
+	VALUES ("90e19668-a3cb-40fa-b707-4e8ecb0b3925",
+	'vehicleArrives',
+	'',
+	1,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("469e8483-e8ac-4a5b-8db3-497f6dea2d0a",
+	"90e19668-a3cb-40fa-b707-4e8ecb0b3925",
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'Yes',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_EP
+	VALUES ("5f8a9147-2f80-422f-9977-668fe4d2addf",
+	"a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	-1,
+	'showTicket',
+	'');
+INSERT INTO C_AS
+	VALUES ("5f8a9147-2f80-422f-9977-668fe4d2addf",
+	'showTicket',
+	'',
+	1,
+	"90e19668-a3cb-40fa-b707-4e8ecb0b3925");
+INSERT INTO C_PP
+	VALUES ("12e8dc1c-a22d-4cee-a0ff-384193c9e17f",
+	"5f8a9147-2f80-422f-9977-668fe4d2addf",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'TktNum',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_EP
+	VALUES ("f92c211e-168c-474d-ad22-85bb33a08386",
+	"a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	-1,
+	'takeTicket',
+	'');
+INSERT INTO C_AS
+	VALUES ("f92c211e-168c-474d-ad22-85bb33a08386",
+	'takeTicket',
+	'',
+	1,
+	"5f8a9147-2f80-422f-9977-668fe4d2addf");
+INSERT INTO C_EP
+	VALUES ("a43785db-e878-4a60-bc89-0864d40b9ec6",
+	"a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	-1,
+	'enterCarPark',
+	'');
+INSERT INTO C_AS
+	VALUES ("a43785db-e878-4a60-bc89-0864d40b9ec6",
+	'enterCarPark',
+	'',
+	1,
+	"f92c211e-168c-474d-ad22-85bb33a08386");
+INSERT INTO C_EP
+	VALUES ("9f78d720-b058-4419-a87e-40f78633c559",
+	"a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	-1,
+	'spaceCheck',
+	'');
+INSERT INTO C_AS
+	VALUES ("9f78d720-b058-4419-a87e-40f78633c559",
+	'spaceCheck',
+	'',
+	0,
+	"a43785db-e878-4a60-bc89-0864d40b9ec6");
+INSERT INTO C_PP
+	VALUES ("aac5434a-6eed-4fc8-b908-b3c5fee18a3d",
+	"9f78d720-b058-4419-a87e-40f78633c559",
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'SpaceAvailable',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_EP
+	VALUES ("10d4c58f-00a0-4b3b-92f6-f34376e43fdb",
+	"a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	-1,
+	'ticketData',
+	'');
+INSERT INTO C_AS
+	VALUES ("10d4c58f-00a0-4b3b-92f6-f34376e43fdb",
+	'ticketData',
+	'',
+	0,
+	"9f78d720-b058-4419-a87e-40f78633c559");
+INSERT INTO C_PP
+	VALUES ("b988df42-186c-4758-a2c2-73031aeb31f8",
+	"10d4c58f-00a0-4b3b-92f6-f34376e43fdb",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'TktNum',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("dbf59615-ff99-4362-b529-a3dfc46b920d",
+	"10d4c58f-00a0-4b3b-92f6-f34376e43fdb",
+	"ba5eda7a-def5-0000-0000-000000000010",
+	'TimeIssued',
+	'',
+	0,
+	'',
+	"b988df42-186c-4758-a2c2-73031aeb31f8");
+INSERT INTO C_PP
+	VALUES ("452f6cac-fd46-47a8-aee2-c2c3e207cffd",
+	"10d4c58f-00a0-4b3b-92f6-f34376e43fdb",
+	"ba5eda7a-def5-0000-0000-000000000010",
+	'TimePaid',
+	'',
+	0,
+	'',
+	"dbf59615-ff99-4362-b529-a3dfc46b920d");
+INSERT INTO C_PP
+	VALUES ("a10ce6fc-0450-451d-b072-f8b656e24036",
+	"10d4c58f-00a0-4b3b-92f6-f34376e43fdb",
+	"ba5eda7a-def5-0000-0000-000000000010",
+	'TimeCollected',
+	'',
+	0,
+	'',
+	"452f6cac-fd46-47a8-aee2-c2c3e207cffd");
+INSERT INTO C_EP
+	VALUES ("ae0dfffa-4721-4be5-a477-4bf918010dfa",
+	"a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	-1,
+	'ticketTaken',
+	'');
+INSERT INTO C_AS
+	VALUES ("ae0dfffa-4721-4be5-a477-4bf918010dfa",
+	'ticketTaken',
+	'',
+	0,
+	"10d4c58f-00a0-4b3b-92f6-f34376e43fdb");
+INSERT INTO C_EP
+	VALUES ("c56ac017-f528-47aa-bec2-05347a02905a",
+	"a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	-1,
+	'vehicleEntered',
+	'');
+INSERT INTO C_AS
+	VALUES ("c56ac017-f528-47aa-bec2-05347a02905a",
+	'vehicleEntered',
+	'',
+	0,
+	"ae0dfffa-4721-4be5-a477-4bf918010dfa");
+INSERT INTO PE_PE
+	VALUES ("a7777cf2-76a2-4832-9009-8d79f780f9dd",
+	1,
+	"9da85cf5-cb1e-4711-ab4b-2ce56337a8fd",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("9da85cf5-cb1e-4711-ab4b-2ce56337a8fd",
+	"cb825a68-8f45-47a2-859f-883306c92aec",
+	"cb825a68-8f45-47a2-859f-883306c92aec",
+	'CP_Interfaces',
+	'',
+	0,
+	'../CP_Interfaces.xtuml');

@@ -1,0 +1,253 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	"cb825a68-8f45-47a2-859f-883306c92aec",
+	'CPUI_Control_Functions',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("32064ed9-3fd0-47da-a431-5c4c9285786d",
+	112,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'CarParkTry::CP_System::CPUI::CPUI_Control_Functions');
+INSERT INTO DIM_DIA
+	VALUES ("32064ed9-3fd0-47da-a431-5c4c9285786d",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SYNC
+	VALUES ("e7f7b249-75e0-4420-8b0b-5a687fcd53cf",
+	"00000000-0000-0000-0000-000000000000",
+	'ShowTicketData',
+	'',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO S_SPARM
+	VALUES ("2a1bc950-40e2-4c07-bf6e-c4b89dd3ac07",
+	"e7f7b249-75e0-4420-8b0b-5a687fcd53cf",
+	'TNum',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_SPARM
+	VALUES ("913c3de5-8d2f-47d5-bcea-7ac5bf412ca0",
+	"e7f7b249-75e0-4420-8b0b-5a687fcd53cf",
+	'TIssue',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"2a1bc950-40e2-4c07-bf6e-c4b89dd3ac07",
+	'');
+INSERT INTO S_SPARM
+	VALUES ("e0b91573-12cf-4176-96f7-7e1c2d9e0247",
+	"e7f7b249-75e0-4420-8b0b-5a687fcd53cf",
+	'TPaid',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"913c3de5-8d2f-47d5-bcea-7ac5bf412ca0",
+	'');
+INSERT INTO S_SPARM
+	VALUES ("8fce9b6d-4820-4dca-ba78-5e470e731e74",
+	"e7f7b249-75e0-4420-8b0b-5a687fcd53cf",
+	'TCollected',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"e0b91573-12cf-4176-96f7-7e1c2d9e0247",
+	'');
+INSERT INTO PE_PE
+	VALUES ("e7f7b249-75e0-4420-8b0b-5a687fcd53cf",
+	1,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("b03bd7fa-7aa1-4f85-9b8a-c9fc8eb0b96d",
+	"00000000-0000-0000-0000-000000000000",
+	'TktTakenMessage',
+	'',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("b03bd7fa-7aa1-4f85-9b8a-c9fc8eb0b96d",
+	1,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("2caaa61b-7b4a-4d1e-8744-53493ae1e154",
+	"00000000-0000-0000-0000-000000000000",
+	'VehicleEnteredMessage',
+	'',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("2caaa61b-7b4a-4d1e-8744-53493ae1e154",
+	1,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("057b6152-866c-4830-a1f8-0543530fb3bd",
+	"00000000-0000-0000-0000-000000000000",
+	'SpaceCheckMessage',
+	'',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("057b6152-866c-4830-a1f8-0543530fb3bd",
+	1,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("5acccfea-01a3-4c00-81ed-aad6535abec2",
+	"00000000-0000-0000-0000-000000000000",
+	'EnteringCarPark',
+	'',
+	'send CP_Con::enterCarPark();',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("5acccfea-01a3-4c00-81ed-aad6535abec2",
+	1,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("17c3e5e6-777d-435b-b482-8bd2ac4d340e",
+	"00000000-0000-0000-0000-000000000000",
+	'VehicleArriving',
+	'',
+	'send CP_Con::vehicleArrives( Yes: True );',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("17c3e5e6-777d-435b-b482-8bd2ac4d340e",
+	1,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("25174e10-4676-4a46-a59b-d7f33e1990d4",
+	"00000000-0000-0000-0000-000000000000",
+	'TakingTicket',
+	'',
+	'send CP_Con::takeTicket();',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("25174e10-4676-4a46-a59b-d7f33e1990d4",
+	1,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("5480b0c0-af53-436c-abd2-d0cbd35d6d66",
+	"00000000-0000-0000-0000-000000000000",
+	'BARDown',
+	'',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO S_SPARM
+	VALUES ("f019eedc-67bb-4f10-af33-1c3beeb09c91",
+	"5480b0c0-af53-436c-abd2-d0cbd35d6d66",
+	'yes',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO PE_PE
+	VALUES ("5480b0c0-af53-436c-abd2-d0cbd35d6d66",
+	1,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("bbc92a2e-a89b-45b6-88fe-78e53657f8e0",
+	"00000000-0000-0000-0000-000000000000",
+	'testCPUIEntry',
+	'',
+	'// Ongoing car park operation is represented by the following 3 functions.
+// Each function sends an appropriate signal to the CP Controller.
+
+::VehicleArriving();
+//control stop;
+::TakingTicket();
+//control stop;
+::EnteringCarPark();',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("bbc92a2e-a89b-45b6-88fe-78e53657f8e0",
+	1,
+	"a3350414-a60a-448b-a358-300734105f5a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO PE_PE
+	VALUES ("a3350414-a60a-448b-a358-300734105f5a",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"27c012ca-2924-4498-8ae7-4e481fc5da9d",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("27c012ca-2924-4498-8ae7-4e481fc5da9d",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'CPUI',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../CPUI.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("cb825a68-8f45-47a2-859f-883306c92aec",
+	'CarParkTry',
+	1,
+	'../../../CarParkTry.xtuml');

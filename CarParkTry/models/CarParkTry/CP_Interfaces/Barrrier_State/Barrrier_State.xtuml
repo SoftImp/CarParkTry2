@@ -1,0 +1,42 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("624fe724-9a42-4a22-8281-733792294af7",
+	"00000000-0000-0000-0000-000000000000",
+	'Barrrier_State',
+	'');
+INSERT INTO C_EP
+	VALUES ("1f438c51-92c8-4440-bb6e-5fa02e693560",
+	"624fe724-9a42-4a22-8281-733792294af7",
+	-1,
+	'barrierClose',
+	'');
+INSERT INTO C_AS
+	VALUES ("1f438c51-92c8-4440-bb6e-5fa02e693560",
+	'barrierClose',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("225f6ccc-db0f-430c-8740-8f71a2b0f362",
+	"1f438c51-92c8-4440-bb6e-5fa02e693560",
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'Yes',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("624fe724-9a42-4a22-8281-733792294af7",
+	1,
+	"9da85cf5-cb1e-4711-ab4b-2ce56337a8fd",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("9da85cf5-cb1e-4711-ab4b-2ce56337a8fd",
+	"cb825a68-8f45-47a2-859f-883306c92aec",
+	"cb825a68-8f45-47a2-859f-883306c92aec",
+	'CP_Interfaces',
+	'',
+	0,
+	'../CP_Interfaces.xtuml');

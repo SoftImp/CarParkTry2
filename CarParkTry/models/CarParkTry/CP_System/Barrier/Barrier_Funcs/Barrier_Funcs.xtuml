@@ -1,0 +1,154 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("b8bff0d5-2fd4-4e6f-893f-22de9c7231dd",
+	"00000000-0000-0000-0000-000000000000",
+	"cb825a68-8f45-47a2-859f-883306c92aec",
+	'Barrier_Funcs',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("3d995620-57fe-4732-ad23-3fcea0cb1231",
+	112,
+	"b8bff0d5-2fd4-4e6f-893f-22de9c7231dd",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'CarParkTry::CP_System::Barrier::Barrier_Funcs');
+INSERT INTO DIM_DIA
+	VALUES ("3d995620-57fe-4732-ad23-3fcea0cb1231",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SYNC
+	VALUES ("fa68a440-7379-4fda-9e6e-7681e27a99a1",
+	"00000000-0000-0000-0000-000000000000",
+	'openBarrier',
+	'',
+	'LOG::LogInfo( message: "Opening barrier for vehicle to enteer car park.");
+
+bar = BAR::useInstance();
+
+generate BAR1:OPEN to bar;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("fa68a440-7379-4fda-9e6e-7681e27a99a1",
+	1,
+	"b8bff0d5-2fd4-4e6f-893f-22de9c7231dd",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("d8032813-990b-4927-8c48-4d957337a639",
+	"00000000-0000-0000-0000-000000000000",
+	'initBarrier',
+	'',
+	'bar = BAR::useInstance();
+
+bar.BAR_Number = 1;
+
+LOG::LogInfo( message: "\n Barrier has been instantiated.\n" );
+',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("d8032813-990b-4927-8c48-4d957337a639",
+	1,
+	"b8bff0d5-2fd4-4e6f-893f-22de9c7231dd",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("1db97e4f-495d-4470-aa5f-7bceb0f9bf69",
+	"00000000-0000-0000-0000-000000000000",
+	'closeBarrier',
+	'',
+	'LOG::LogInfo( message: "Closing barrier for vehicle to enteer car park.");
+
+bar = BAR::useInstance();
+
+generate BAR2:CLOSE to bar;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("1db97e4f-495d-4470-aa5f-7bceb0f9bf69",
+	1,
+	"b8bff0d5-2fd4-4e6f-893f-22de9c7231dd",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("dd5b70d8-298f-4572-bad0-1f7d1204f8bd",
+	"00000000-0000-0000-0000-000000000000",
+	'controlBarrier',
+	'',
+	'bar = BAR::useInstance();
+
+	if param.BarPos == true
+		LOG::LogInfo( message: "Sent event to OPEN Barrier." );
+		generate BAR1:OPEN to bar;
+		//::openBarrier();
+		
+	else
+		LOG::LogInfo( message: "Sent event to CLOSE Barrier." );
+		generate BAR2:CLOSE to bar;
+		//::closeBarrier();
+	end if;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO S_SPARM
+	VALUES ("3b7f6237-a651-43e8-8cc6-1330bb910fd7",
+	"dd5b70d8-298f-4572-bad0-1f7d1204f8bd",
+	'BarPos',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO PE_PE
+	VALUES ("dd5b70d8-298f-4572-bad0-1f7d1204f8bd",
+	1,
+	"b8bff0d5-2fd4-4e6f-893f-22de9c7231dd",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO PE_PE
+	VALUES ("b8bff0d5-2fd4-4e6f-893f-22de9c7231dd",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"9f31f410-a5f9-4d32-a1e6-c71fb918e55e",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("9f31f410-a5f9-4d32-a1e6-c71fb918e55e",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'Barrier',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../Barrier.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("cb825a68-8f45-47a2-859f-883306c92aec",
+	'CarParkTry',
+	1,
+	'../../../CarParkTry.xtuml');
